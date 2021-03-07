@@ -1,43 +1,59 @@
 .header {
   width: 100vw;
   height: 4rem;
-  background:#b40001;
+  background: #b40001;
   display: flex;
   align-items: center;
-/*   justify-content: space-between;/*  */ 
-/*   justify-content:  space-around;/*  */ 
- /*  justify-content: space-evenly;/ */
-
 }
 
-.logo{
-    margin-left: 2rem;
-    margin-right: 5rem;
-    
-
+header .logo {
+  margin-left: 2rem;
+  margin-right: 5rem;
 }
 
- nav ul {
-    margin: 0 2rem;
-    display:flex; /* para poder usar flexbox */
-    align-items: center;
-   
- 
- }
+header nav ul {
+  margin: 0 2rem;
+  display: flex; /* para poder usar flexbox */
+  /* align-items: center; */
+}
+header nav ul li {
+  width: auto;
+  height: 1.4rem;
+  /* transition: 0.1s; */
+  position: relative;
+  /* background-color: aqua; */
+}
+header nav ul li:hover::before {
+  width: 100%;
+}
 
- li a {
-   margin: 0 .5rem;
-   font-size: 15px;
-   font-family: Arial, Helvetica, sans-serif;
-   text-decoration: none;
+header nav ul li::before {
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  transition: width 0.5s;
+}
+
+header nav ul li::after {
+  content: "";
+  height: 1px;
+  width: 0%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+header nav ul li a {
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
   color: white;
-  font-weight: 900; /* grosor letras */
- }
-
-li a:hover  {
-  width: fit-content;
-{
-
-
-
-
+  font-weight: 800; /* grosor letras */
+  text-transform: uppercase;
+}
